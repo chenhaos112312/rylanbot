@@ -90,7 +90,7 @@ export const LayoutBase = (props) => {
 
   return (
     <ThemeGlobalLawn.Provider value={{ SEARCH_MODAL: searchModal }}>
-      <div id="theme-lawn" className={`${FONT_STYLE}  dark:bg-black scroll-smooth`}>
+      <div id="theme-lawn" className={`${FONT_STYLE} dark:bg-black scroll-smooth`}>
         {/* 特定主题 CSS */}
         <Style />
 
