@@ -2,8 +2,8 @@ const BLOG = require('./blog.config');
 const { fontFamilies } = require('./lib/font');
 
 module.exports = {
-  purge:['./themes/**/*.js'],
-  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
+  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './themes/**/*.js'],
+  safelist: ['font-serif'],
   darkMode: BLOG.APPEARANCE === 'class' ? 'media' : 'class', // or 'media' or 'class'
   theme: {
     fontFamily: fontFamilies,
