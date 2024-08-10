@@ -2,6 +2,7 @@ const BLOG = require('./blog.config');
 const { fontFamilies } = require('./lib/font');
 
 module.exports = {
+  important: true,
   content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './themes/**/*.js'],
   darkMode: BLOG.APPEARANCE === 'class' ? 'media' : 'class', // or 'media' or 'class'
   theme: {
