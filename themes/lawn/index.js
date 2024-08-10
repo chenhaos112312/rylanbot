@@ -51,8 +51,6 @@ export const LayoutBase = (props) => {
   const router = useRouter();
   const { fullWidth } = useGlobal();
 
-  const TITLE = siteConfig('TITLE');
-  const FONT_STYLE = siteConfig('FONT_STYLE');
   const LAWN_HOME_BANNER_ENABLE = siteConfig('LAWN_HOME_BANNER_ENABLE', null, CONFIG);
   const LAYOUT_SIDEBAR_REVERSE = JSON.parse(siteConfig('LAYOUT_SIDEBAR_REVERSE'));
 
@@ -91,7 +89,7 @@ export const LayoutBase = (props) => {
 
   return (
     <ThemeGlobalLawn.Provider value={{ SEARCH_MODAL: searchModal }}>
-      <div id="theme-lawn" className={`${FONT_STYLE} dark:bg-black scroll-smooth`}>
+      <div id="theme-lawn" className="dark:bg-black scroll-smooth">
         {/* 特定主题 CSS */}
         <Style />
 
@@ -129,7 +127,7 @@ export const LayoutBase = (props) => {
         <AlgoliaSearchModal cRef={searchModal} {...props} />
 
         {/* 页脚 */}
-        <Footer title={TITLE} />
+        <Footer/>
       </div>
     </ThemeGlobalLawn.Provider>
   );
